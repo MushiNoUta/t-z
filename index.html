@@ -211,6 +211,7 @@
         <div class="absolute -bottom-6 -left-4 md:-left-8 w-12 h-12 md:w-16 md:h-16 text-miku-cyan opacity-70 animate-float" style="animation-delay: 1s">
             <i class="fa fa-music text-2xl md:text-3xl"></i>
         </div>
+        
         <!-- 信封主体 -->
         <div class="envelope-body bg-gradient-to-b from-miku-dark to-miku-blue rounded-b-3xl p-2 md:p-3 neon-border animate-shine relative z-20 min-h-[300px] md:min-h-[400px]">
             <!-- 信封盖 -->
@@ -223,6 +224,7 @@
                     <i class="fa fa-moon-o text-miku-cyan text-xl"></i>
                 </div>
             </div>
+            
             <!-- 信件内容 -->
             <div class="letter bg-gray-900/95 rounded-lg p-6 md:p-8">
                 <!-- 富文本内容区域 -->
@@ -233,43 +235,55 @@
                             <i class="fa fa-heart text-3xl text-miku-pink animate-pulse-slow"></i>
                         </div>
                     </div>
+                    
                     <!-- 信件正文 -->
                     <div class="space-y-5 text-gray-200 leading-relaxed text-lg">
                         <p class="text-xl md:text-2xl text-white text-shadow-miku">我亲爱的谭胖胖～</p>
+                        
                         <p>生日快乐！这是我们一起度过的第4个生日啦～时间过得好快呀～</p>
+                        
                         <p>先来拆拆你的生日礼物吧～哈哈，你一定很疑惑～（不是刮胡刀吗？！）</p>
+                        
                         <p>当然不是！今年我们要整个大的——一起去看miku的演唱会吧！我们一起去体验现场的音乐，收获不一样的感动～</p>
-                        <!-- 图片1 - 本地 -->
+                        
+                        <!-- 图片1 - 改为本地 -->
                         <div class="my-8">
                             <img src="./images/miku_expo.jpg" 
                                  alt="演唱会门票信息" 
                                  class="w-full h-auto rounded-lg shadow-lg">
                         </div>
+                        
                         <p>要是你仔细看，一定会发现，演唱会的时间正好是我生日前一天，23点结束后一起回到酒店过生日，是不是超有意义！</p>
-                        <!-- 图片2 - 本地 -->
+                        
+                        <!-- 图片2 - 改为本地 -->
                         <div class="my-8">
                             <img src="./images/piaotu.png" 
                                  alt="演唱会详情" 
                                  class="w-full h-auto rounded-lg shadow-lg">
                         </div>
-                        <p>这次演唱会是在曼谷，哎，我买的时间晚了，只剩下曼谷有票，当然我也提前做好了攻略，曼谷是安全的（只要我们正常旅行不...</p>
+                        
+                        <p>这次演唱会是在曼谷，哎，我买的时间晚了，只剩下曼谷有票，当然我也提前做好了攻略，曼谷是安全的（只要我们正常旅行不去搞一些奇奇怪怪的事情），这座城市我也去过2次��算是比较熟悉。不过，如果谭胖胖会觉得太担心，我们也可以不去，把票卖掉去干点别的，不用有压力！</p>
+                        
                         <div class="my-6 p-4 bg-miku-purple/10 rounded-lg border border-miku-purple/30">
                             <h3 class="text-xl font-bold text-miku-purple mb-3 flex items-center">
                                 <i class="fa fa-star mr-2"></i>许愿time～
                             </h3>
-                            <p>我们的人生有了新支点，小猪的降生给予我们更多的快乐和责任，我要和谭胖胖一起看着小猪长大、一起去很多地方、一起...</p>
+                            <p>我们的人生有了新支点，小猪的降生给予我们更多的快乐和责任，我要和谭胖胖一起看着小猪长大、一起去很多地方、一起体验人生、一起慢慢变老，所以，谭胖胖一定要好好养护自己的身体，少加班班，多睡觉觉，勤扯哄哄！</p>
                         </div>
+                        
                         <div class="my-6 p-4 bg-miku-pink/10 rounded-lg border border-miku-pink/30">
                             <h3 class="text-xl font-bold text-miku-pink mb-3 flex items-center">
                                 <i class="fa fa-heart mr-2"></i>表白time～
                             </h3>
-                            <p>和谭胖胖结婚是我此生最正确的决定，人生何其有幸，能和自己相似的人相遇相伴成长，希望未来我们可以一直同频，做相...</p>
+                            <p>和谭胖胖结婚是我此生最正确的决定，人生何其有幸，能和自己相似的人相遇相伴成长，希望未来我们可以一直同频，做相互欣赏的爱人、并肩作战的战友，无话不谈、一起犯傻的朋友。</p>
                         </div>
+                        
                         <!-- 结尾句子 -->
                         <div class="my-8 text-center">
                             <p class="text-xl font-bold text-white animate-pulse-slow">愿小谭和小张，</p>
                             <p class="text-xl font-bold text-white animate-pulse-slow">一起红尘作伴，活得潇潇洒洒</p>
                         </div>
+                        
                         <!-- 署名 -->
                         <div class="text-right mt-8">
                             <p class="text-miku-light font-bold">永远爱你的 <span class="text-miku-cyan ml-2">小张</span></p>
@@ -302,10 +316,12 @@
             audio.play().catch(e => console.log('需要用户交互才能播放音乐:', e));
             document.removeEventListener('click', enableAudio);
         }, { once: true });
+        
         // 信封交互
         const envelope = document.getElementById('envelope');
         const openHint = document.getElementById('open-hint');
         let isOpen = false;
+        
         envelope.addEventListener('click', () => {
             isOpen = !isOpen;
             if (isOpen) {
@@ -319,17 +335,21 @@
                 openHint.style.display = 'block';
             }
         });
+        
         // 创建爱心动画
         function createHearts() {
             const container = document.body;
             const count = window.innerWidth < 640 ? 10 : 30;
+            
             for (let i = 0; i < count; i++) {
                 setTimeout(() => {
                     const heart = document.createElement('div');
                     heart.classList.add('heart');
+                    
                     const x = Math.random() * 100;
                     const size = window.innerWidth < 640 ? Math.random() * 8 + 6 : Math.random() * 10 + 8;
                     const rotation = Math.random() * 40 - 20;
+                    
                     heart.style.left = `${x}vw`;
                     heart.style.top = '100vh';
                     heart.style.width = `${size}px`;
@@ -338,8 +358,10 @@
                     heart.style.animationDelay = `${Math.random() * 2}s`;
                     heart.style.transform = `rotate(45deg) rotate(${rotation}deg)`;
                     heart.style.background = i % 3 === 0 ? '#FF78C4' : i % 3 === 1 ? '#9D5CFF' : '#00B5E9';
+                    
                     const color = heart.style.background;
                     heart.style.setProperty('--heart-color', color);
+                    
                     const style = document.createElement('style');
                     style.textContent = `
                         .heart:nth-child(${i + 1})::before,
@@ -348,11 +370,14 @@
                         }
                     `;
                     document.head.appendChild(style);
+                    
                     container.appendChild(heart);
+                    
                     setTimeout(() => {
                         heart.style.opacity = '0.8';
                         heart.style.transition = 'opacity 0.5s ease';
                     }, 10);
+                    
                     setTimeout(() => {
                         heart.style.opacity = '0';
                         heart.style.transition = 'opacity 0.8s ease';
@@ -363,6 +388,7 @@
                             document.head.removeChild(style);
                         }, 800);
                     }, 5000);
+                    
                 }, i * 100);
             }
         }
